@@ -66,9 +66,10 @@ for i in range(test_case):
     for i in student_score[1:]:         #range(len(student_score))로 해서 오류에서 한동안 못벗어남ㅠㅠ
         if i > avg:                     #i(student_score의 성적들)이 구한 평균값 보다 크다면
             count += 1                  #i 가 평균보다 큰 경우 count변수에 1씩 더해준다.
-    per = count/student_score[0] * 100  # (평균보다 더 큰 수의 수/전체)*100
+            per = count/student_score[0] * 100  # (평균보다 더 큰 수의 수/전체)*100
 
-    print("{:.3f} %".format(per))       #format을 활용한 문자열 출력 기억하기
+    #print("{:.3f} %".format(per))       #format을 활용한 문자열 출력 기억하기
+    print(f'{per:.3f}%')                 #f-string 사용한 print문
 
 #format 이용해서
 # "{:.출력할 소수 자릿수f}출력할 다른 문자열".format(출력변수)
