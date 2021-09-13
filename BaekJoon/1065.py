@@ -13,7 +13,7 @@ sol
 5. 출력
 
 '''
-N = int(input())
+'''N = int(input())
 
 cnt = 0
 
@@ -25,3 +25,20 @@ for i in range(1, N+1):
         if X[2] - X[1] == X[1] - X[0]:
             cnt += 1
 print(cnt)
+'''
+
+#함수사용
+
+def func1(result):      #함수이름; func1(result)
+    cnt = 0
+    for i in range(1, result+1):        #1~result 까지 반복
+        if i < 100:
+            cnt += 1
+        else:
+            X = list(map(int, str(i)))
+            if X[2] - X[1] == X[1] - X[0]:
+                cnt += 1
+    return cnt      #return구문 위치 유의할 것, cnt 리턴해줌
+
+result = int(input())       #result에 정수를 input해줌
+print(func1(result))
