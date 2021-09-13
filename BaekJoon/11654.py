@@ -11,3 +11,4 @@ ord(); 아스키코드를 반환해준다
 s = str(input())    #A 입력
 
 print(ord(s))       #65출력
+
