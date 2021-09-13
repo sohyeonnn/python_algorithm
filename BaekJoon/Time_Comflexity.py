@@ -12,11 +12,11 @@ print(func1(N))
 
 
 #0x00시간, 공간복잡도; 문제2
+'''
 def func2(K, N):
-    cnt = 0
     for i in range(N):
         for j in K:
-            if K[j] == 100:     #내부 원소의 합잉 100이면... 어떻게 쓰지?
+            if K[j] + K[i] == 100:     #내부 원소의 합잉 100이면... 어떻게 쓰지?
                 cnt = 1
             else:
                 cnt = 0
@@ -25,9 +25,36 @@ def func2(K, N):
 
 N = int(input())
 for i in range(N):
-    K = list(map(int, input()))
-print(func2(K,N))
+    K = list(map(int, input().split()))
+print(func2(K, N))
+'''
 
+
+#0x00시간, 공간복잡도; 문제3
 '''
-코드짜는중 완성x
+def func3(N):
+    for i in range(N):
+        i += 1
+        if i*i == N:
+            result = 1
+            break
+        else:
+            result = 0
+    return result
+
+N = int(input())
+print(func3(N))
 '''
+
+
+#0x00시간, 공간복잡도; 문제4
+#???.....
+def func4(N):
+    result = 0
+    for i in range(N):
+        i += 1
+        result = max(2**i)
+N = int(input())
+print(func4(N))
+
+#몰라.....뭔가 공부방식이 잘못된듯
