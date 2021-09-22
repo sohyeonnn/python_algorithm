@@ -14,8 +14,12 @@ n = int(input())
 room = 1            #벌집의 개수, 1부터 시작
 result_room = 1
 
+
+#while문이 반복하면서 6의 배수로 숫자가 증가한다.
+#이 증가하는 숫자가 입력받은수(n)에 도달할 때 까지만 반복하고
+#반복되는 동안에 반복횟수를 카운트해서 카운트된 수를 출력한다.
 while n > room:
-    room += 6 * result_room     #벌집이 6의 배수로 증가하낟.
+    room += 6 * result_room     #벌집이 6의 배수로 증가한다.
     result_room += 1            #while문을 반복하는 횟수를 뜻함함print(result_room)
 print(result_room)
 
