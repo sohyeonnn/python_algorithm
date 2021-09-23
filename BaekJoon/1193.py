@@ -7,6 +7,8 @@
 '''
 
 import sys
+import time
+start_time = time.time()
 
 n = int(sys.stdin.readline().rstrip())
 
@@ -29,3 +31,6 @@ else:                   #사선 라인이 홀수 라인일 때
     under = line - gap
 
 print(f"{top}/{under}")
+
+end_time = time.time()
+print("프로그램 수행시간: ", end_time-start_time)
