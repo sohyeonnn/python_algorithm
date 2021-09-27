@@ -88,8 +88,8 @@ print(count)
 '''
 
 
-#문자열 재정렬;   sort()-sorted()차이점 / join함수
-
+#문자열 재정렬;   sort()-sorted()차이점 / join함수 / isalpha()메서드
+'''
 s = input()
 
 s1 = list(s)
@@ -105,6 +105,29 @@ for i in s1:        #리스트안의 원소를 하나씩 확인한다
     else:
         result.append(i)    #number에 해당하지 않는다면 result 리스트에 순서대로 append한다.
 result = sorted(result)     #오름차순으로 정렬한다.
+if hap > 0:                 #만약 hap이 0보다 크다면,(숫자가 존재했다면)
+    result.append(str(hap)) #number에 해당하는 i를 더해준 hap을 str형태로 append한다.
+
+print("".join(result))      #공백없이 붙여서 출력
+'''
+
+#isalpha() 메서드 사용한 풀이 방법
+s = input()
+
+s1 = list(s)
+
+hap = 0     #숫자끼리 더해주기위함
+result = []     #빈리스트생성
+
+for i in s1:        #리스트안의 원소를 하나씩 확인한다
+    if i.isalpha():     #i가 alpha형태인지 확인한다. 맞다면,
+        result.append(i)
+    else:
+        hap += int(i)
+
+result = sorted(result)     #오름차순으로 정렬한다.
+
+
 if hap > 0:                 #만약 hap이 0보다 크다면,(숫자가 존재했다면)
     result.append(str(hap)) #number에 해당하는 i를 더해준 hap을 str형태로 append한다.
 
