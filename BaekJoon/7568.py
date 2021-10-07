@@ -1,5 +1,5 @@
 #덩치(실버5)_브루트포스
-
+'''
 n =int(input())
 
 info_list = []
@@ -25,4 +25,29 @@ for i in range(n):
 
 
 #for i in rank:
+    print(count, end=' ')
+'''
+
+
+n =int(input())
+
+info_list = []
+
+#빈 리스트에 kg, cm 변수를 저장
+for i in range(n):
+    kg, cm = map(int, input().split())
+    info_list.append((kg, cm))
+
+#덩치 비교
+for i in range(n):          #i는 현재 사람
+
+    count = 1               #나보다 덩치 큰 사람 수 +1
+    for j in range(n):      #j는 다음 사람(비교될사람)
+
+
+        #(info_list[i][0] < info_list[j][0]) = 현재사람 kg < 다음사람 kg
+        #info_list[i][0] => 0은 kg, 1은 cm 이다.
+        if (info_list[i][0] < info_list[j][0]) and (info_list[i][1] < info_list[j][1]):
+            count += 1      #count + 1 해준다.
+
     print(count, end=' ')
