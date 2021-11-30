@@ -61,6 +61,7 @@
 
 
 #우선순위 큐 라이브러리를 활용한 힙 정렬 구현 예제
+'''
 import sys
 import heapq
 input = sys.stdin.readline()
@@ -72,6 +73,9 @@ def heapsort(iterable):
 
     #모든 원소를 차례대로 힙에 삽입
     for value in iterable:
+
+        # heappush() 함수를 이용하여 힙에 원소를 추가할 수 있음,
+        # heappush(h, value) -> h는 원소를 추가할 대상 리스트/value는 추가할 원소를 넘긴다.
         heapq.heappush(h, value)    #max heap 형태가 필요하다면 데이터를 '-' 형태로 넣음
 
     #힙에 삽입된 모든 원소를 차례대로 꺼내어 담기
@@ -89,3 +93,22 @@ res = heapsort(arr)
 
 for i in range(n):
     print(res[i])       #오름차순 정렬 형태로 출력
+'''
+
+
+#힙정렬
+import heapq
+
+def heap_sort(nums):
+    heap = []
+    for num in nums:
+
+        # num 을 heap 에 추가
+        heapq.heappush(heap, num)
+
+    sorted_nums = []
+    while heap:
+        sorted_nums.append(heapq.heappop(heap))
+    return  sorted_nums
+
+print(heap_sort([4, 1, 7, 3, 8, 5]))
